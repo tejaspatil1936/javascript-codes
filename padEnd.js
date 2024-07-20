@@ -10,3 +10,4 @@ console.log(paddedText);
 let numb = 5;
 let text1 = numb.toString();
 let paddedText1 = text1.padEnd(4,"0");
+console.log(paddedText1);
