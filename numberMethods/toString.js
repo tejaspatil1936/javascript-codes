@@ -3,6 +3,7 @@ let x = 123;
 let a = x.toString();
 let b = (123).toString();
 let c = (100 + 23).toString();
+
 console.log(a);
 console.log(b);
 console.log(c);

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sudoku-board">
+        <table>
+            <!-- Generating 9 rows for the Sudoku -->
+            {% for row in range(9) %}
+            <tr>
+                <!-- Generating 9 columns for each row -->
+                {% for col in range(9) %}
+                <td><input type="text" maxlength="1" class="sudoku-cell" id="cell-{{ row }}-{{ col }}"></td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <button onclick="solveSudoku()">Solve</button>
+    <script src="script.js"></script>
+</body>
+</html>

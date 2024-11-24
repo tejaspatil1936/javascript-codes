@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>armstrong number checker</title>
+  </head>
+  <body style="color: white; background-color: #212121">
+    <button onclick="checkarmstrong()">Check armstrong Number</button>
+
+    <script>
+      function checkarmstrong() {
+        let number = prompt(
+          "enter a number to check if it is an armstrong number:"
+        );
+
+        if (isNaN(number)) {
+          alert("enter a valid number.");
+          return;
+        }
+
+        let num = parseInt(number);
+        let sum = 0;
+        let temp = num;
+        let digits = number.length;
+
+        while (temp > 0) {
+          let digit = temp % 10;
+          sum += Math.pow(digit, digits);
+          temp = Math.floor(temp / 10);
+        }
+
+        if (sum === num) {
+          alert(number + " is an armstrong number");
+        } else {
+          alert(number + " is not an armstrong number");
+        }
+      }
+    </script>
+  </body>
+</html>

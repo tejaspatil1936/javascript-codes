@@ -5,6 +5,7 @@ let a = x.toPrecision();
 let b = x.toPrecision(2);
 let c = x.toPrecision(4);
 let d = x.toPrecision(6);
+
 console.log(a);
 console.log(b);
 console.log(c);

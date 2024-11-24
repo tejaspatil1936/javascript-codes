@@ -2,11 +2,11 @@ const newGrid = (size) => {
     let arr = new Array(size);
 
     for (let i = 0; i < size; i++) {
-        arr[i] = new Array(size);  
+        arr[i] = new Array(size);
     }
 
     for (let i = 0; i < Math.pow(size, 2); i++) {
-        arr[Math.floor(i/size)][i%size] = CONSTANT.UNASSIGNED;
+        arr[Math.floor(i / size)][i % size] = CONSTANT.UNASSIGNED;
     }
 
     return arr;
@@ -40,7 +40,7 @@ const isBoxSafe = (grid, box_row, box_col, value) => {
 
 // check in row, col and 3x3 box
 const isSafe = (grid, row, col, value) => {
-    return isColSafe(grid, col, value) && isRowSafe(grid, row, value) && isBoxSafe(grid, row - row%3, col - col%3, value) && value !== CONSTANT.UNASSIGNED;
+    return isColSafe(grid, col, value) && isRowSafe(grid, row, value) && isBoxSafe(grid, row - row % 3, col - col % 3, value) && value !== CONSTANT.UNASSIGNED;
 }
 
 // find unassigned cell

@@ -4,6 +4,7 @@ let x = 9.656;
 let a = x.toExponential(2);
 let b = x.toExponential(4);
 let c = x.toExponential(6);
+
 console.log(a);
 console.log(b);
 console.log(c);

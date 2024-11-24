@@ -2,6 +2,7 @@ let x = 123;
 let a = x.valueOf();
 let b = (123).valueOf();
 let c = (100 + 23).valueOf()
+
 console.log(a);
 console.log(b);
 console.log(c);

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple LCM Calculator</title>
+  </head>
+  <body style="color: white; background-color: #212121">
+    <button onclick="calculateLCM()">Find LCM</button>
+
+    <script>
+      function calculateLCM() {
+        let num1 = prompt("Enter the first number:");
+        let num2 = prompt("Enter the second number:");
+
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+
+        let max = num1 > num2 ? num1 : num2;
+
+        while (true) {
+          if (max % num1 === 0 && max % num2 === 0) {
+            alert("LCM of " + num1 + " and " + num2 + " is " + max);
+            break;
+          }
+          max++;
+        }
+      }
+    </script>
+  </body>
+</html>

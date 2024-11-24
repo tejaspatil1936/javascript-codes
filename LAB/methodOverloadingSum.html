@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator with Overloaded Add Function</title>
+</head>
+<body>
+
+    <h1>Calculator</h1>
+    
+    <p>Sum of Two Integers: <span id="intResult"></span></p>
+    <p>Sum of Two Floats: <span id="floatResult"></span></p>
+    <p>Sum of One Integer and One Float: <span id="mixedResult"></span></p>
+
+    <script>
+        class Calculator {
+            Add(a, b) {
+                if (Number.isInteger(a) && Number.isInteger(b)) {
+                    // Both arguments are integers
+                    return a + b;
+                } else if (typeof a === "number" && typeof b === "number") {
+                    // Both arguments are floats or mixed (int and float)
+                    return a + b;
+                } else {
+                    throw new Error("Invalid input types. Please enter integers or floats.");
+                }
+            }
+        }
+
+        // Create a calculator instance
+        const calc = new Calculator();
+
+        // Calculate the sum of two integers
+        const intResult = calc.Add(5, 10);
+        document.getElementById("intResult").innerText = intResult;
+
+        // Calculate the sum of two floats
+        const floatResult = calc.Add(5.5, 10.5);
+        document.getElementById("floatResult").innerText = floatResult;
+
+        // Calculate the sum of one integer and one float
+        const mixedResult = calc.Add(5, 10.5);
+        document.getElementById("mixedResult").innerText = mixedResult;
+    </script>
+
+</body>
+</html>
